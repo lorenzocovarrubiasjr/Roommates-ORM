@@ -18,10 +18,10 @@ private
 
   def scrape_row(row)
     {
-    :date_created => row.search('#sortable-results > ul > li:nth-child(1) > p > time'),
-    :title => row.search('#sortable-results > ul > li:nth-child(2) > p > a').text,
-    :url => row.search('#sortable-results > ul > li:nth-child(2) > p > a').attribute("href"),
-    :price => row.search('#sortable-results > ul > li:nth-child(1) > p > span.result-meta > span.result-price').text
+    :date_created => rows.search('time.result-date'),
+    :title => rows.search('#sortable-results > ul > li:nth-child(2) > p > a').text,
+    :url => rows.search('#sortable-results > ul > li:nth-child(2) > p > a').attr("href"),
+    :price => rows.search('#sortable-results > ul > li:nth-child(1) > p > span.result-meta > span.result-price').text
     }
   end
 
