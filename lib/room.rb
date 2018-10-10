@@ -1,5 +1,2 @@
-class Room
-  attr_accessor :title, :date_created, :price, :url 
-
-
-end
+#class Room < ActiveRecord::Base
+#end
